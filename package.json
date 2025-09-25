@@ -1,0 +1,14 @@
+{
+  "name": "Golf website",
+  "version": "1.0.0",
+  "description": "Golf website for demo project.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass src/scss/style.scss src/css/style.css -w"
+  },
+  "author": "Muhammd iar Hossain",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.93.2"
+  }
+}
