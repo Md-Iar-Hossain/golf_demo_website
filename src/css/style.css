@@ -13,10 +13,6 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
 p, a, span, i {
   font-size: 1.6rem;
 }
@@ -47,13 +43,14 @@ header {
   background: #121212;
 }
 header figure {
-  padding-block: 1.2rem;
-  padding-inline: 2rem;
-  width: 26rem;
+  width: 24rem;
   justify-content: center;
   display: flex;
   background: #bf9a5e;
   align-items: center;
+}
+header figure a {
+  font-size: 0;
 }
 header nav {
   width: 70%;
@@ -120,6 +117,10 @@ header nav ul.main_menu li.menu:hover ul.sub_menu {
 }
 header nav ul.main_menu li.menu ul.sub_menu.last {
   left: -300%;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
