@@ -1,0 +1,91 @@
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #121212;
+
+   figure {
+      width: 24rem;
+      justify-content: center;
+      display: flex;
+      background: #bf9a5e;
+      align-items: center;
+
+      a {font-size: 0;}
+   }
+
+   nav {
+      width: 70%;
+
+      ul.main_menu {
+         display: flex;
+         gap: 4.8rem;
+         justify-content: flex-end;
+         padding-inline-end: 2rem;
+         
+         li.main_menu_item a {
+            color: #f2f2f2;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+         }
+         
+         li.main_menu_item > a {
+            padding-block: 3.5rem;
+            border-bottom: 0.5rem solid transparent;
+         }
+         li.main_menu_item:hover > a {
+            color: #bf9a5e;
+            border-bottom-color: #bf9a5e;
+         }
+      
+         
+         li.icon {
+            display: grid;
+            place-items: center;
+            padding-block: 2.1rem;
+            cursor: pointer;
+            
+            .search_icon {
+               width: 3.2rem;
+               padding-inline-end: 1rem;
+            }
+   
+            .search_icon svg {
+               fill: #f1f1f1;
+            }
+         }
+         
+         li.menu {
+            position: relative;
+            
+            ul.sub_menu {
+               position: absolute;
+               top: 115%;
+               left: 0;
+               width: 25rem;
+               background: #2e2e2e;
+               padding-block: 1rem;
+               opacity: 0;
+               pointer-events: none;
+               transition: all 0.3s ease-in-out;
+               
+               & li:hover a {background: #121212;}
+
+               & a {
+                  width: 100%;
+                  letter-spacing: 0.2rem;
+                  padding: 0.8rem 1rem 0.8rem 2.5rem;
+               }
+            }
+            &:hover ul.sub_menu {
+               top: 100%;
+               opacity: 1;
+               pointer-events: all;
+            }
+            ul.sub_menu.last {left: -300%;}
+         }
+
+      }
+   }
+}

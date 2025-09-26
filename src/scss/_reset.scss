@@ -1,0 +1,30 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+html {font-size: 62.5%;}
+p,a,span,i {font-size: 1.6rem;}
+img {
+   max-width: 100%;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+a,
+button,
+input,
+span {
+   display: inline-block;
+}
