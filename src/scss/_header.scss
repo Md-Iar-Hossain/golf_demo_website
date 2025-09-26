@@ -5,7 +5,6 @@ header {
    background: #121212;
 
    figure {
-      width: 24rem;
       justify-content: center;
       display: flex;
       background: #bf9a5e;
@@ -31,7 +30,7 @@ header {
          }
          
          li.main_menu_item > a {
-            padding-block: 3.5rem;
+            padding-block: 3.99rem;
             border-bottom: 0.5rem solid transparent;
          }
          li.main_menu_item:hover > a {
