@@ -37,6 +37,97 @@ span {
   display: inline-block;
 }
 
+.modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  border: none;
+  background: linear-gradient(45deg, #252525, #4c4c4c);
+}
+.modal .close_btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 5rem;
+  cursor: pointer;
+}
+.modal .close_btn svg {
+  fill: #f1f1f1;
+}
+.modal form.modal_form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Open Sans", sans-serif;
+  outline: 0.2rem solid #bf9a5e;
+  outline-offset: 1rem;
+  transform: translate(-50%, -50%);
+}
+.modal form.modal_form input {
+  padding: 1.5rem 1rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 600;
+}
+.modal form.modal_form input[type=search] {
+  width: 30rem;
+}
+.modal form.modal_form input[type=submit] {
+  cursor: pointer;
+  padding: 1.5rem;
+  background: #bf9a5e;
+}
+.modal form.modal_form input[type=submit]:hover {
+  color: #fafafa;
+  background: #252525;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.container_fluid {
+  max-width: 128rem;
+  margin: 0 auto;
+}
+
+.py-1 {
+  padding-block: 1rem;
+}
+
+.px-1 {
+  padding-inline: 1rem;
+}
+
+.py-2 {
+  padding-block: 2rem;
+}
+
+.px-2 {
+  padding-inline: 2rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.jutify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 header {
   display: flex;
   height: 10.2rem;
@@ -121,53 +212,41 @@ header nav ul.main_menu li.menu ul.sub_menu.last {
   left: -300%;
 }
 
-.modal {
-  position: fixed;
+section.here_section {
+  position: relative;
+  min-height: 100vh;
+}
+section.here_section::before {
+  content: "";
+  position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100vh;
-  border: none;
-  background: linear-gradient(45deg, #252525, #4c4c4c);
+  z-index: -1;
+  background: url("../../../img/2.webp") no-repeat fixed;
+  background-size: cover;
 }
-.modal .close_btn {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: 5rem;
-  cursor: pointer;
+section.here_section .article_post {
+  justify-content: flex-end;
 }
-.modal .close_btn svg {
-  fill: #f1f1f1;
-}
-.modal form.modal_form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+section.here_section .article_post article {
+  height: auto;
+  padding: 5rem;
+  background: rgba(255, 255, 255, 0.7333333333);
   font-family: "Open Sans", sans-serif;
-  outline: 0.2rem solid #bf9a5e;
-  outline-offset: 1rem;
-  transform: translate(-50%, -50%);
 }
-.modal form.modal_form input {
-  padding: 1.5rem 1rem;
-  font-size: 2rem;
-  border: none;
-  outline: none;
+section.here_section .article_post article h2 {
+  width: 43rem;
+  font-size: 5rem;
+  line-height: 1.15;
+  font-weight: 800;
   text-transform: uppercase;
-  font-family: inherit;
-  font-weight: 600;
 }
-.modal form.modal_form input[type=search] {
-  width: 30rem;
+section.here_section .article_post article span {
+  color: #bf9a5e;
+  display: block;
 }
-.modal form.modal_form input[type=submit] {
-  cursor: pointer;
-  padding: 1.5rem;
-  background: #bf9a5e;
-}
-.modal form.modal_form input[type=submit]:hover {
-  color: #fafafa;
-  background: #252525;
+section.here_section .article_post article p {
+  width: 40rem;
+  margin-top: 1rem;
 }
 
 body {

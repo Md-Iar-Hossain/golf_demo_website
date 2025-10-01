@@ -1,0 +1,38 @@
+section.here_section {
+   position: relative;
+   min-height: 100vh;
+
+   &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: url('../../../img/2.webp') no-repeat fixed;
+      background-size: cover;
+   }
+   .article_post {
+      justify-content: flex-end;
+      
+      article {
+         height: auto;
+         padding: 5rem;
+         background: #fffb;
+         font-family: $headingFont;
+         h2 {
+            width: 43rem;
+            font-size: 5rem;
+            line-height: 1.15;
+            font-weight: 800;
+            text-transform: uppercase;
+         }
+         span {
+            color: $primaryColor;
+            display: block;
+         }
+         p {
+            width: 40rem;
+            margin-top: 1rem;
+         }
+      }
+   }
+}

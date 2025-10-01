@@ -1,6 +1,8 @@
-@import 'reset.scss';
-@import 'header.scss';
-@import 'modal.scss';
+@import 'reset',
+        'modal',
+        'utilities',
+        'layout/header',
+        'layout/hero_section'; 
 body {
    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
