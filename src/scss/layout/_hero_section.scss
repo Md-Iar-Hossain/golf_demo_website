@@ -1,6 +1,7 @@
 section.here_section {
    position: relative;
    min-height: 100vh;
+   overflow: hidden;
 
    &::before {
       content: '';
@@ -9,7 +10,10 @@ section.here_section {
       z-index: -1;
       background: url('../../../img/2.webp') no-repeat fixed;
       background-size: cover;
+      transform: scale(1);
+      transition: all 0.3s ease-in-out;
    }
+   &:hover:before {transform: scale(1.05);} 
    .article_post {
       justify-content: flex-end;
       
@@ -34,5 +38,20 @@ section.here_section {
             margin-top: 1rem;
          }
       }
+   }
+}
+section .btn {
+   color: $bgColor;
+   display: block;
+   text-align: center;
+   font-weight: 600;
+   text-transform: uppercase;
+   border: 0.1rem solid $bgColor;
+   border-radius: 2rem;
+   transition: all 0.3s ease-in-out;
+
+   &:hover {
+      color: $textColor;
+      background: $bgColor;
    }
 }

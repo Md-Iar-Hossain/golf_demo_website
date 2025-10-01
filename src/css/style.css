@@ -112,6 +112,22 @@ span {
   padding-inline: 2rem;
 }
 
+.my-1 {
+  margin-block: 1rem;
+}
+
+.mx-1 {
+  margin-inline: 1rem;
+}
+
+.my-2 {
+  margin-block: 2rem;
+}
+
+.mx-2 {
+  margin-inline: 2rem;
+}
+
 .d-flex {
   display: flex;
 }
@@ -129,6 +145,10 @@ span {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
   display: flex;
   height: 10.2rem;
   justify-content: space-between;
@@ -215,6 +235,7 @@ header nav ul.main_menu li.menu ul.sub_menu.last {
 section.here_section {
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 section.here_section::before {
   content: "";
@@ -223,6 +244,11 @@ section.here_section::before {
   z-index: -1;
   background: url("../../../img/2.webp") no-repeat fixed;
   background-size: cover;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+section.here_section:hover:before {
+  transform: scale(1.05);
 }
 section.here_section .article_post {
   justify-content: flex-end;
@@ -247,6 +273,21 @@ section.here_section .article_post article span {
 section.here_section .article_post article p {
   width: 40rem;
   margin-top: 1rem;
+}
+
+section .btn {
+  color: #252525;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 0.1rem solid #252525;
+  border-radius: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+section .btn:hover {
+  color: #fafafa;
+  background: #252525;
 }
 
 body {
