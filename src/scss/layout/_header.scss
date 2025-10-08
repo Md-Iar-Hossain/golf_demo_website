@@ -3,57 +3,61 @@ header {
    top: 0;
    left: 0;
    z-index: 5;
-   display: flex;
    height: 10.2rem;
    justify-content: space-between;
    background: #121212;
+
    figure {
       width: 26.4rem;
       height: 10.2rem;
       background: #bf9a5e;
+
       a {
          font-size: 0;
       }
    }
+
    nav {
       width: 70%;
+      margin-left: auto;
+      transition: all 0.5s ease-in-out;
+
       ul.main_menu {
          display: flex;
          gap: 4.8rem;
          height: 100%;
          justify-content: flex-end;
-         padding-inline-end: 2rem;
+
          li.main_menu_item a {
             color: #f2f2f2;
             font-size: 1.5rem;
             text-transform: uppercase;
             transition: all 0.2s ease-in-out;
          }
+
          li.main_menu_item>a {
             display: grid;
             height: 100%;
             place-items: center;
             border-bottom: 0.5rem solid transparent;
          }
+
          li.main_menu_item:hover>a {
             color: #bf9a5e;
             border-bottom-color: #bf9a5e;
          }
-         li.icon {
-            display: grid;
-            place-items: center;
-            padding-block: 2.1rem;
-            cursor: pointer;
-            .search_icon {
-               width: 3.2rem;
-               padding-inline-end: 1rem;
-            }
-            .search_icon svg {
-               fill: #f1f1f1;
-            }
-         }
+
          li.menu {
             position: relative;
+
+            img {
+               width: 2rem;
+               filter: invert(1);
+               margin-top: -5px;
+               display: none;
+               transition: all 0.2s ease-in-out;
+            }
+
             ul.sub_menu {
                position: absolute;
                top: 115%;
@@ -64,23 +68,137 @@ header {
                opacity: 0;
                pointer-events: none;
                transition: all 0.3s ease-in-out;
+
                & li:hover a {
                   background: #121212;
                }
+
                & a {
                   width: 100%;
                   letter-spacing: 0.2rem;
                   padding: 0.8rem 1rem 0.8rem 2.5rem;
                }
             }
-            &:hover ul.sub_menu {
-               top: 100%;
-               opacity: 1;
-               pointer-events: all;
+
+            &:hover {
+               img {
+                  transform: rotate(90deg);
+               }
+
+               ul.sub_menu {
+                  top: 100%;
+                  opacity: 1;
+                  pointer-events: all;
+               }
             }
+
             ul.sub_menu.last {
                left: -300%;
             }
+         }
+      }
+   }
+
+   .search_icon {
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      width: 2.3rem;
+      margin-inline: 4rem;
+   }
+
+   .search_icon svg {
+      fill: #f1f1f1;
+   }
+
+   .menu_bar {
+      width: 5rem;
+      cursor: pointer;
+      filter: invert(1);
+      display: none;
+   }
+}
+
+@media only screen and (max-width: 1250px) {
+   header nav {
+      ul.main_menu {
+         gap: 4rem;
+      }
+   }
+}
+
+@media only screen and (max-width: 1101px) {
+   header nav {
+      ul.main_menu {
+         gap: 3rem;
+      }
+   }
+
+   header .search_icon {
+      margin-inline: 2rem;
+   }
+}
+
+@media only screen and (max-width: 1050px) {
+   header {
+      height: auto;
+
+      nav {
+         display: none;
+         position: absolute;
+         top: 8rem;
+         right: -100%;
+      }
+      .search_icon {
+         margin-left: auto;
+      }
+
+      .menu_bar {
+         display: block;
+      }
+
+      figure {
+         width: 20.4rem;
+         height: 8.2rem;
+      }
+   }
+}
+@media only screen and (max-width: 400px) {
+    html {font-size: 55%;}
+}
+@keyframes rotateIn {
+   to {transform: rotate(180deg);}
+}
+@keyframes rotateOut {
+   to {transform: rotate(-180deg);}
+}
+nav.active {
+   right: -20%;
+   display: block;
+   height: 100vh;
+   width: 100%;
+   padding-block-start: 5rem;
+   overflow-Y: auto;
+   background: $bgColor;
+
+
+   ul.main_menu {
+      padding-top: 2rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      li.menu {
+         img {
+            display: block;
+         }
+
+         ul.sub_menu {
+            z-index: 5;
+         }
+
+         ul.sub_menu.last {
+            left: 0;
          }
       }
    }

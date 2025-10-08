@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <header>
+    <header class="d-flex align-center">
         <figure>
             <a href="#"><img src="img/logo.svg" alt="Web logo" class="logo"></a>
         </figure>
         <nav>
             <ul class="main_menu">
-                <li class="main_menu_item menu">
+                <li class="main_menu_item menu d-flex">
                     <a href="#">News</a>
+                    <img src="img/arrow_right.svg" alt="" class="icon">
                     <ul class="sub_menu">
                         <li>
                             <a href="#" title="Tour">Tour</a>
                         </li>
                     </ul>
                 </li>
-                <li class="main_menu_item menu">
+                <li class="main_menu_item menu d-flex">
                     <a href="#">Buyer’s Guides</a>
+                    <img src="img/arrow_right.svg" alt="" class="icon">
                     <ul class="sub_menu">
                         <li class="sub_menu_item"><a href="#" title="Drivers Buyer’s Guides">Drivers</a></li>
                         <li class="sub_menu_item"><a href="#" title="Fairway Woods Buyer’s Guides">Fairway Woods</a>
@@ -43,8 +45,9 @@
                         <li class="Golf Accessories Buyers Guides sub_menu_item"><a href="#">Golf Accessories</a></li>
                     </ul>
                 </li>
-                <li class="main_menu_item menu">
+                <li class="main_menu_item menu d-flex">
                     <a href="#">Reviews</a>
+                    <img src="img/arrow_right.svg" alt="" class="icon">
                     <ul class="sub_menu">
                         <li class="sub_menu_item"><a href="#" title="Drivers Buyer’s Guides">Drivers</a></li>
                         <li class="sub_menu_item"><a href="#" title="Fairway Woods Buyer’s Guides">Fairway Woods</a>
@@ -68,8 +71,9 @@
                 <li class="main_menu_item"><a href="#">Instruction</a></li>
                 <li class="main_menu_item"><a href="#">Labs</a></li>
                 <li class="main_menu_item"><a href="#">Forum</a></li>
-                <li class="main_menu_item menu">
+                <li class="main_menu_item menu d-flex">
                     <a href="#">Tools</a>
+                    <img src="img/arrow_right.svg" alt="" class="icon">
                     <ul class="sub_menu last">
                         <li class="sub_menu_item"><a href="#" title="Head To Head Golf Club Comparison">Head-to-Head</a>
                         </li>
@@ -79,25 +83,23 @@
                         <li class="sub_menu_item"><a href="#">Store</a></li>
                     </ul>
                 </li>
-                <li class="icon main_menu_item">
-                    <div class="search_icon">
-                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-                            <path
-                                d="M6.57 1A5.57 5.57 0 1 1 1 6.57 5.57 5.57 0 0 1 6.57 1m0-1a6.57 6.57 0 1 0 6.57 6.57A6.57 6.57 0 0 0 6.57 0z" />
-                            <path d="m10.031 11.447 1.415-1.414 4.193 4.193-1.415 1.414z" />
-                        </svg>
-                    </div>
-                </li>
             </ul>
         </nav>
+        <div class="search_icon">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path
+                    d="M6.57 1A5.57 5.57 0 1 1 1 6.57 5.57 5.57 0 0 1 6.57 1m0-1a6.57 6.57 0 1 0 6.57 6.57A6.57 6.57 0 0 0 6.57 0z" />
+                <path d="m10.031 11.447 1.415-1.414 4.193 4.193-1.415 1.414z" />
+            </svg>
+        </div>
+        <div class="menu_bar">
+            <img src="img/menu.svg" alt="">
+        </div>
     </header>
     <dialog>
         <div class="modal">
             <div class="close_btn">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm3.707,12.293a1,1,0,1,1-1.414,1.414L12,13.414,9.707,15.707a1,1,0,0,1-1.414-1.414L10.586,12,8.293,9.707A1,1,0,0,1,9.707,8.293L12,10.586l2.293-2.293a1,1,0,0,1,1.414,1.414L13.414,12Z" />
-                </svg>
+                <img src="img/close.svg" alt="">
             </div>
             <form action="#" class="modal_form">
                 <input type="search" placeholder="Find on MyGolfSpy…">
